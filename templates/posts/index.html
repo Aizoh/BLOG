@@ -1,0 +1,18 @@
+{% extends 'posts/layout.html' %}
+{% block content %}
+<div class="p-3 mb-2 bg-primary text-white">
+    <h1 class="container text-center" >{{title}}</h1>
+    <!-- to loop thru the objects-->
+    <ul>
+        {% for post in posts %}
+        <!--create a url in the posts url to point to details-->
+        <li><a class="text-warning" href="/posts/details/{{post.id}}">{{post.title}}</a></li>
+        
+        {% endfor %}
+    
+    
+    </ul>
+            
+</div>
+
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'posts/layout.html' %}
+{% block content %}
+<div class="p-3 mb-2 bg-primary text-white">
+    <h1 class="container text-center" >{{post.title}}</h1>
+    <!-- to loop thru the objects-->
+   <div>
+       {{post.body}}
+   </div>
+    <div>
+        {{post.time}}
+    </div> 
+</div>
+<a  class="btn" href="/posts">GO back</a>
+{% endblock %}
